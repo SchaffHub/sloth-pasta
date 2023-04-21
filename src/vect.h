@@ -45,13 +45,19 @@ typedef limb_t bool_t;
 # define redc_mont_pasta redcx_mont_pasta
 #endif
 
+extern "C"
 void mul_mont_pasta(vec256 ret, const vec256 a, const vec256 b,
                     const vec256 p, limb_t n0);
+extern "C"
 void sqr_mont_pasta(vec256 ret, const vec256 a, const vec256 p, limb_t n0);
+extern "C"
 void redc_mont_pasta(vec256 ret, const vec512 a, const vec256 p, limb_t n0);
+extern "C"
 void from_mont_pasta(vec256 ret, const vec256 a, const vec256 p, limb_t n0);
 
+extern "C"
 void add_mod_pasta(vec256 ret, const vec256 a, const vec256 b, const vec256 p);
+extern "C"
 void sub_mod_pasta(vec256 ret, const vec256 a, const vec256 b, const vec256 p);
 
 #ifdef __UINTPTR_TYPE__

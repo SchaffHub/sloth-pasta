@@ -5,6 +5,7 @@ typedef vec256 xy256[2];
 #if defined(__ADX__) && !defined(__PASTA_PORTABLE__)
 # define sqr_n_mul_mont_pasta sqrx_n_mul_mont_pasta
 #endif
+extern "C"
 void sqr_n_mul_mont_pasta(vec256 ret, const vec256 a, size_t n,
                                       const vec256 b,
                                       const vec256 p, limb_t p0);
